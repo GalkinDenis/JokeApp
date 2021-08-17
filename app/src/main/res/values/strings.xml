@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Joke App</string>
+    <string name="explain">Enter the ticker id</string>
+    <string name="enter">Enter count</string>
+    <string name="Reload">Reload</string>
+    <string name="joke_list">Joke list</string>
+    <string name="Web">Web</string>
+    <string name="constraint">****</string>
+</resources>
