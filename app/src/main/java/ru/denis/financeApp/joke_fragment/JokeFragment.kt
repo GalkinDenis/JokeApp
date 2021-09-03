@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import ru.denis.financeApp.MainActivity.Companion.list
 import ru.denis.financeApp.app.App
 import ru.denis.financeApp.databinding.JokeListBinding
 import ru.denis.financeApp.interfaces.JokeInterface
@@ -17,11 +16,13 @@ class JokeFragment : Fragment(), JokeInterface {
     @Inject lateinit var controller: Controller
     private var _binding: JokeListBinding? = null
     private val binding get() = _binding!!
+    private var list: Array<String>? = null
+
 
     //Инициализация адаптера.
-    override fun setAdapter(s: Array<String>) {
-        list = s
-        binding.recyclerView.adapter = JokeAdapter(s)
+    override fun setAdapter(setList: Array<String>) {
+        list = setList
+        binding.recyclerView.adapter = JokeAdapter(setList)
     }
 
     //Сохранение данных списка перед сменой конфигурации экрана.
@@ -75,9 +76,6 @@ class JokeFragment : Fragment(), JokeInterface {
                 //Обращение в контроллеру за установкой списка.
                 controller.loadRestoreList(list!!)
             }
-        }else if(!list.isNullOrEmpty()){
-            //Обращение в контроллеру за установкой списка после возврата из фрагмента WebView.
-            controller.loadRestoreList(list!!)
         }
 
 
