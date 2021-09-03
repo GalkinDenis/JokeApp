@@ -1,6 +1,5 @@
 package ru.denis.financeApp.model
 
-import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import android.webkit.WebView
@@ -16,7 +15,7 @@ import ru.denis.financeApp.interfaces.ModelInterface
 import ru.denis.financeApp.interfaces.WebApi
 import ru.denis.financeApp.web_fragment.WebFragment
 
-class Model: Activity(), ModelInterface {
+class Model: ModelInterface {
     private var controller: Controller? = null
 
     //Сохранение ссылки на Controller.
