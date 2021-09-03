@@ -1,13 +1,12 @@
 package ru.denis.financeApp.presenter
 
-import android.app.Activity
 import android.os.Bundle
 import android.webkit.WebView
 import ru.denis.financeApp.interfaces.JokeInterface
 import ru.denis.financeApp.interfaces.ModelInterface
 import ru.denis.financeApp.web_fragment.WebFragment
 
-class Controller(private val modelView: ModelInterface) : Activity() {
+class Controller(private val modelView: ModelInterface) {
     private var jokeView: JokeInterface? = null
     private var webViews: WebFragment? = null
 
@@ -22,8 +21,8 @@ class Controller(private val modelView: ModelInterface) : Activity() {
     }
 
     //Восстановление сохраненного списка после смены конфигурации экрана/возврата из WebFragment.
-    fun loadRestoreList(list: Array<String>) {
-        jokeView?.setAdapter(list)
+    fun loadRestoreList(restoreList: Array<String>) {
+        jokeView?.setAdapter(restoreList)
     }
 
     //Загрузка шуток через "API icndb.com".
