@@ -14,11 +14,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
 
-    companion object{
-        //Кеш для спписка шуток.
-        var list: Array<String>? = null
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -47,5 +42,7 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }
+
+
 
 
