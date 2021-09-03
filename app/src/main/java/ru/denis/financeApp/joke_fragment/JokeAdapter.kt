@@ -3,11 +3,10 @@ package ru.denis.financeApp.joke_fragment;
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import ru.denis.financeApp.presenter.Controller
 import ru.denis.financeApp.databinding.ItemBinding
 
 //Адаптер списка шуток.
-class JokeAdapter(private var s: Array<String>) :
+class JokeAdapter(private val s: Array<String>) :
     RecyclerView.Adapter<JokeAdapter.TrendViewHolder>() {
 
     //Биндинг элементов списка.
